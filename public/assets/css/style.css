@@ -304,6 +304,10 @@ header
   color: #fff;
 }
 
+.main-nav .logo {
+  max-width: 80px;
+}
+
 .background-header .main-nav .nav li:hover a {
   color: #4b8ef1;
 }
@@ -324,9 +328,9 @@ header
   transform: translateX(-50%);
 }
 
-.background-header .nav li:last-child a.active:after {
+/* .background-header .nav li:last-child a.active:after {
   background-color: transparent;
-}
+} */
 
 .header-area {
   background-color: transparent;
@@ -943,10 +947,20 @@ Banner Style
   text-align: center;
   position: relative;
   z-index: 20;
+  border-radius: 80px;
+  padding: 40px 110px;
+  background: #eaeef7;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-banner .right-image {
+    padding: 40px 40px;
+  }
 }
 
 .main-banner .right-image img {
   max-width: 710px;
+  transform: rotate(-5deg);
 }
 
 .main-banner .left-content .white-button a {
@@ -1018,6 +1032,12 @@ Services Style
   border-radius: 10px;
   border-top-right-radius: 50px;
   transition: all .3s;
+}
+
+.service-item p {
+  min-height: 250px;
+  max-height: 250px;
+  overflow: hidden;
 }
 
 .service-item .icon {
@@ -1276,6 +1296,16 @@ The Clients
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
+}
+
+.client-content p > a {
+  padding: 0px 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.client-content p > a:hover {
+  background-color: #ccefff;
 }
 
 .the-clients .nacc .thumb .client-content p {
@@ -1649,9 +1679,7 @@ footer #search button:hover {
 
 .footer-widget ul {
   display: inline;
-  max-width: 40%;
   float: left;
-  margin-right: 10%;
 }
 
 .footer-widget ul li {
