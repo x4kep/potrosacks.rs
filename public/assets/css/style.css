@@ -407,12 +407,12 @@ header
   font-weight: 400;
 }
 
-.header-area .main-nav .nav li:last-child a:hover ,
+/* .header-area .main-nav .nav li:last-child a:hover ,
 .background-header .main-nav .nav li:last-child a:hover,
 .header-area .main-nav .nav li:nth-child(6) a:hover ,
 .background-header .main-nav .nav li:nth-child(6) a:hover {
   color: #fff !important;
-}
+} */
 
 .header-area .main-nav .nav li a {
   display: block;
@@ -435,9 +435,9 @@ header
   color: #4b8ef1!important;
 }
 
-.header-area .main-nav .nav li:last-child a.active {
+/* .header-area .main-nav .nav li:last-child a.active {
   color: #fff !important;
-}
+} */
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
@@ -1032,6 +1032,7 @@ Services Style
   border-radius: 10px;
   border-top-right-radius: 50px;
   transition: all .3s;
+  min-height: 520px;
 }
 
 .service-item p {
@@ -1060,6 +1061,11 @@ Services Style
   transition: all .3s;
   font-size: 15px;
   margin-bottom: 20px;
+}
+
+.service-item .text-button {
+  position: absolute;
+  bottom: 30px;
 }
 
 .service-item:hover h4,
@@ -1173,6 +1179,14 @@ About Us
   z-index: 1;
 }
 
+
+.about-us .right-image img {
+  border-radius: 5%;
+  transform: rotate(-10deg);
+  margin-top: 70px;
+  margin-left: 40px;
+}
+
 .about-us:after {
   background-image: url(../images/about-bg.jpg);
   width: 777px;
@@ -1215,7 +1229,7 @@ The Clients
 
 .menu .thumb h4 {
   margin-bottom: 0px;
-  font-size: 20px;
+  font-size: 16px;
   color: #2a2a2a;
 }
 
@@ -1247,6 +1261,15 @@ The Clients
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.menu > div {
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+
+.menu > div:hover {
+  background-color: #f6f6f6;
+}
+
 .the-clients .naccs .menu div.active h4,
 .the-clients .naccs .menu div.active i,
 .the-clients .naccs .menu div.active span.rating,
@@ -1265,7 +1288,7 @@ The Clients
 
 .the-clients ul.nacc li {
   opacity: 0;
-  transform: translateX(-50px);
+  /* transform: translateX(-50px); */
   position: absolute;
   list-style: none;
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1273,10 +1296,11 @@ The Clients
 
 .the-clients ul.nacc li.active {
   transition-delay: 0.3s;
-  position: relative;
+  position: absolute;
+  /* position: relative; */
   z-index: 2;
   opacity: 1;
-  transform: translateX(0px);
+  /* transform: translateX(0px); */
 }
 
 .the-clients ul.nacc li {
@@ -1316,6 +1340,11 @@ The Clients
   margin-top: 30px;
 }
 
+.down-content img {
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
 .the-clients .nacc .thumb .down-content {
   margin-top: 30px;
 }
@@ -1323,7 +1352,7 @@ The Clients
 .the-clients .nacc .thumb .down-content img {
   width: 170px;
   height: 170px;
-  border-radius: 50%;
+  border-radius: 5%;
   display: inline;
 }
 
@@ -1972,16 +2001,16 @@ responsive
 --------------------------------------------- 
 */
 
-
-
 @media (max-width: 1200px) {
   .header-area .main-nav .logo h4 {
     font-size: 24px;
   }
+
   .header-area .main-nav .logo h4 img {
     max-width: 25px;
     margin-left: 0px;
   }
+
   .header-area .main-nav .nav li:last-child {
     padding-left: 20px;
   }
@@ -2004,123 +2033,161 @@ responsive
   .header-area {
     background-color: #fff;
   }
+
   .main-banner:after {
     display: none;
   } 
+
   .main-banner .left-content h2 {
     color: #2a2a2a;
     margin-right: 0;
   }
+
   .main-banner .left-content p {
     color: #afafaf;
     margin-right: 0;
   }
+
   .main-banner .left-content .white-button a {
     background-color: #4b8ef1;
     color: #fff !important;
   }
+
   form#contact {
     overflow: hidden;
   }
+
   .header-area .main-nav .logo h4 {
     font-size: 20px;
   }
+
   .main-banner .left-content {
     margin-right: 0px;
   }
+
   .main-banner {
     text-align: center;
     padding: 226px 0px 30px 0px;
   }
+
   .main-banner:before {
     display: none;
   }
+
   .main-banner .right-image {
     margin: 30px auto 0px auto;
     text-align: center;
   }
+
   .features-item {
     margin-bottom: 45px;
   }
+
   .last-features-item,
   .last-skill-item {
     margin-bottom: 0px !important;
   }
+
   .skill-item {
     margin-bottom: 30px;
   }
+
   .about-left-image img {
     margin-right: 0px;
     margin-bottom: 45px;;
   }
+
   .services .naccs .menu div {
     font-size: 15px;
     font-weight: 500;
   }
+
   .service-item {
     text-align: center;
     margin-bottom: 30px;
   }
+
   .about-us .box-item {
     text-align: center;
   }
+
   .about-us:after {
     display: none;
   }
+
   .about-us .gradient-button,
   .about-us span {
     text-align: center;
     display: block;
   }
+
   .about-us .right-image {
     margin-top: 30px;
   }
+
   .service-item .icon {
     margin: 0 auto 30px auto;
   }
+
   .about-us .section-heading {
     text-align: center;
   }
+
   .about-us .left-image {
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 45px;
   }
+
   .blog-posts {
     margin-left: 0px;
     margin-top: 30px;
   }
+
   .post-item {
     margin-bottom: 70px;
   }
+
   .pricing-item-regular {
     margin-bottom: 30px;
   }
+
   .our-portfolio .owl-nav {
     display: none !important;
   }
+
   .contact-info {
     margin-top: 60px;
   }
+
   form#contact {
     padding: 45px;
   }
 }
 
 @media (max-width: 767px) {
+
+  .service-item {
+    min-height: 420px;
+  }
+
   .the-clients .naccs .menu div {
     text-align: center;
   }
+
   footer .section-heading h4 {
     color: #2a2a2a;
   }
+
   footer #search {
     margin-bottom: 45px;
   }
+
   footer {
     padding-top: 0px;
     text-align: center;
   }
+
   .footer-widget ul {
     display: block;
     width: 100%;
@@ -2128,10 +2195,12 @@ responsive
     text-align: center;
     margin: 0 auto;
   }
+
   .footer-widget h4 {
     margin-top: 45px;
     margin-bottom: 20px;
   }
+
   footer #search input {
     border: 1px solid #eee;
     color: #afafaf;
@@ -2140,67 +2209,92 @@ responsive
     margin-bottom: 15px;
     padding: 0px 30px;
   }
+
   footer #search button {
     background-color: #fff;
     color: #4b8ef1;
   }
+
   footer #search input::placeholder { 
     color: #2a2a2a;
   }
+
   .header-area .main-nav .logo h4 {
     font-size: 30px;
   }
+
   .header-area .main-nav .logo h4 img {
     max-width: 30px;
     margin-left: 5px;
   }
+
   .main-banner .info-stat {
     margin-bottom: 15px;
   }
+
   .menu .thumb span.date {
     margin-bottom: -20px;
     display: block;
   }
+
   .service-item {
     text-align: center;
     padding: 30px;
   }
+
   .menu .thumb span.category {
     display: none;
   }
+
   .about-us .right-image {
     margin-top: 30px;
   }
+
+  .about-us .right-image img {
+    padding: 0 20px;
+    margin: 60px 0 0 0;
+  }
+
   .service-item .icon {
     float: none;
     margin-right: 0px;
     margin-bottom: 15px;
   }
+
   .service-item .right-content {
     display: inline-block;
   }
+
   .services .naccs .menu div .thumb {
     padding: 5px;
   }
+
   .services .icon img {
     margin: 0px;
   }
+
   .the-clients .nacc .thumb .down-content .right-content {
+    display: block;
     margin-left: 0px;
     margin-top: 15px;
   }
+
   .services ul.nacc li.active {
     padding: 45px;
   }
+
   .services .naccs .menu div  {
     font-size: 0px;
   }
+
   .the-clients .nacc .thumb .down-content {
     text-align: center;
   }
+
   .services ul.nacc li .right-image img {
     float: none;
   }
+
   .our-portfolio .section-heading,
   .about-us .section-heading,
   .about-us .about-item,
@@ -2208,39 +2302,57 @@ responsive
   .about-us .main-green-button {
     text-align: center;
   }
+
   .our-portfolio .section-heading .line-dec {
     margin: 0 auto;
   }
+
   .our-services .section-heading {
     margin-left: 15px;
     margin-right: 15px;
   }
+
   .free-quote form input {
     margin-left: 0px;
     padding: 0px 30px;
   }
+
   .free-quote form button {
     margin-left: 0px;
     border-bottom-left-radius: 40px;
     border-top-right-radius: 0px;
   }
+
   .blog-posts {
     margin-left: 0px;
     margin-top: 30px;
   }
+
   .post-item {
     margin-bottom: 30px;
   }
+
   .post-item .thumb img {
     max-width: 140px;
   }
+
   .post-item .right-content p {
     display: none;
   }
+
   .about-us .about-item {
     margin-top: 15px;
   }
+
   form#contact {
     padding: 30px;
+  }
+
+  footer {
+    background-position-x: -2110px
+  }
+
+  .footer-widget-margin-top {
+    margin-top: 260px;
   }
 }
